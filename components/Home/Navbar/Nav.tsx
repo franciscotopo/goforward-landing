@@ -1,0 +1,50 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { navLinks } from "@/constant/constant";
+import { HiBars3BottomRight } from "react-icons/hi2";
+
+const Nav = () => {
+  return (
+    <div className="bg-black transition-all duration-200 h-[16vh] z-[1000]">
+      <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
+        {/* LOGO */}
+        <div className="flex items-center h-full">
+          <Image
+            src="/images/GoForwardLogo.svg"
+            alt="Logo de GoForward"
+            width={90}
+            height={0}
+            className="h-[90px] w-auto"
+          />
+        </div>
+
+        {/* NavLinks */}
+
+        <div className="hidden lg:flex items-center space-x-10 text-white">
+          {navLinks.map((link) => {
+            return (
+              <Link href={link.url} key={link.id}>
+                <p
+                  className="relative text-white text-2xl font-medium w-fit block
+    after:block after:content-[''] after:absolute after:left-0 after:-bottom-1
+    after:h-[3px] after:bg-orange-400 after:w-full after:scale-x-0
+    hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-right"
+                >
+                  {link.label}
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+        
+        {/* Burger Menu */}
+        <div className="flex items-center space-x-4">
+        <HiBars3BottomRight className="w-8 h-8 cursor-pointer text-white lg:hidden" /> 
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Nav;
