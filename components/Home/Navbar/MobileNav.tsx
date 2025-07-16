@@ -14,14 +14,29 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
   return (
     <div>
       {/*Foggy overlay*/}
-      <div className={`fixed ${navOpen} inset-0 transform transition-all duration-500 z-[1002] bg-black opacity-70 w-full h-screen`}></div>
+      <div
+        className={`fixed ${navOpen} inset-0 transform transition-all duration-500 z-[1002] bg-black opacity-70 w-full h-screen`}
+      ></div>
 
       {/*Navlinks*/}
-      <div className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-orange-400 space-y-6 z-[1050]`}>
+      <div
+        className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-orange-400 space-y-6 z-[1050]`}
+      >
         {navLinks.map((link) => {
           return (
             <Link key={link.id} href={link.url}>
-              <p className="text-white w-fit text-[20px] ml-12 borderb-b-[1.5px] pb-1 border-white sm:text-[30px]">
+              <p
+                className={`relative text-white w-fit text-[20px] sm:text-[30px] ml-12
+    after:block after:content-[''] after:absolute after:left-0 after:-bottom-1
+    after:h-[2px] after:bg-white after:w-full
+    after:scale-x-0 after:transition-transform after:duration-500
+    ${
+      showNav
+        ? "after:scale-x-100 after:origin-left after:delay-500"
+        : "after:scale-x-0 after:origin-left"
+    }
+  `}
+              >
                 {link.label}
               </p>
             </Link>
