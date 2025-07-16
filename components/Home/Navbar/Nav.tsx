@@ -48,7 +48,7 @@ const Nav = ({ openNav }: Props) => {
             return (
               <Link href={link.url} key={link.id}>
                 <p
-                  className="relative text-white text-2xl font-medium w-fit block
+                  className="relative text-white text-3xl font-medium w-fit block
     after:block after:content-[''] after:absolute after:left-0 after:-bottom-1
     after:h-[3px] after:bg-orange-400 after:w-full after:scale-x-0
     hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-right"

@@ -5,7 +5,8 @@ import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 
 const poppins = Poppins({
   weight:['100','200','300','400','500','600','700','800','900'],
-  subsets:['latin']
+  subsets:['latin'],
+  variable: '--font-poppins'
 })
 
 const anton = Anton({
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className, anton.variable} antialiased`}
+        className={`${poppins.variable, anton.variable} antialiased`}
       >
         <ResponsiveNav />
         {children}
