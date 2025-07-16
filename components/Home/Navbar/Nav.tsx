@@ -33,11 +33,11 @@ const Nav = ({ openNav }: Props) => {
         {/* LOGO */}
         <div className="flex items-center h-full">
           <Image
-            src="/images/GoForwardLogo.svg"
+            src={navBg ? "/images/GoForwardLogoLight.svg" : "/images/GoForwardLogoDark.svg"}
             alt="Logo de GoForward"
-            width={90}
+            width={70}
             height={0}
-            className="h-[90px] w-auto"
+            className="h-[70px] w-auto"
           />
         </div>
 
@@ -48,10 +48,10 @@ const Nav = ({ openNav }: Props) => {
             return (
               <Link href={link.url} key={link.id}>
                 <p
-                  className="relative text-white text-2xl font-medium w-fit block
+                  className={`relative ${navBg ? "text-white" : "text-black"} text-2xl font-medium w-fit block
     after:block after:content-[''] after:absolute after:left-0 after:-bottom-1
     after:h-[3px] after:bg-orange-400 after:w-full after:scale-x-0
-    hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-right"
+    hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-right`}
                 >
                   {link.label}
                 </p>
@@ -64,7 +64,7 @@ const Nav = ({ openNav }: Props) => {
         <div className="flex items-center space-x-4">
           <HiBars3BottomRight
             onClick={openNav}
-            className="w-8 h-8 cursor-pointer text-white lg:hidden"
+            className={`w-8 h-8 cursor-pointer ${navBg ? "text-white" : "text-black"} lg:hidden`}
           />
         </div>
       </div>
