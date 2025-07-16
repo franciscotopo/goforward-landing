@@ -1,27 +1,22 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-import {Poppins} from 'next/font/google'
+import { Poppins, Anton } from 'next/font/google'
 import "./globals.css";
 import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 
-const font = Poppins({
+const poppins = Poppins({
   weight:['100','200','300','400','500','600','700','800','900'],
   subsets:['latin']
 })
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const anton = Anton({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-anton'
+})
 
 export const metadata: Metadata = {
   title: "GoForward | Official Site",
-  description: "GoForward Landing Page using Next.js 15",
+  description: "GoForward WebPage using Next.js 15",
 };
 
 export default function RootLayout({
@@ -32,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} antialiased`}
+        className={`${poppins.className, anton.variable} antialiased`}
       >
         <ResponsiveNav />
         {children}
