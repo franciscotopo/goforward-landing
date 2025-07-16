@@ -4,9 +4,13 @@ import Link from "next/link";
 import { navLinks } from "@/constant/constant";
 import { HiBars3BottomRight } from "react-icons/hi2";
 
-const Nav = () => {
+type Props = {
+  openNav: () => void
+}
+
+const Nav = ({openNav}: Props ) => {
   return (
-    <div className="bg-black transition-all duration-200 h-[16vh] z-[1000]">
+    <div className="bg-black transition-all duration-200 h-[16vh] z-[1000] fixed w-full">
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
         {/* LOGO */}
         <div className="flex items-center h-full">
@@ -40,7 +44,7 @@ const Nav = () => {
         
         {/* Burger Menu */}
         <div className="flex items-center space-x-4">
-        <HiBars3BottomRight className="w-8 h-8 cursor-pointer text-white lg:hidden" /> 
+        <HiBars3BottomRight onClick={openNav} className="w-8 h-8 cursor-pointer text-white lg:hidden" /> 
         </div>
       </div>
     </div>
