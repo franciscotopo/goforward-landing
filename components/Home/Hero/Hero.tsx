@@ -34,12 +34,13 @@ const Hero = () => {
 
           {/* Explore Products Button */}
           <button
-            onClick={() => {
+            className="btn-primary"
+          
+          onClick={() => {
               document
                 .getElementById("products")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="mt-8 px-6 py-3 bg-white text-gray-900 font-semibold rounded hover:bg-gray-200 transition"
           >
             Explore our products
           </button>

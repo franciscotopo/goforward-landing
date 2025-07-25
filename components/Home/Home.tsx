@@ -4,8 +4,9 @@ import HomeProducts from './HomeProducts/HomeProducts'
 import Contact from './Contact/Contact'
 
 const Home = () => {
+  
   return (
-    <div className="overflow-hidden h-[2500]">
+    <div className="overflow-hidden h-[2250]">
       <Hero/>
       <HomeProducts />
       <Contact />
