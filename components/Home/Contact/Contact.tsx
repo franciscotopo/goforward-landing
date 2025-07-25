@@ -12,26 +12,20 @@ const Contact = () => {
       <div className="relative w-full bg-gray-100 py-16 px-4 sm:px-10 lg:px-20">
         <AnimatedTitle text="Contact Us" textColor="text-black" />
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="mt-25 grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Left: Contact Info */}
           <div className="space-y-8 mt-5">
             <div>
-              <h3 className="text-xl font-bold text-black">
-                Head Office
-              </h3>
-              <p className="text-gray-700">
-                123 Your Street
-                <br />
-                City, Country
-              </p>
+              <h3 className="text-6xl font-anton text-orange">Based In</h3>
+              <p className="mt-2 text-3xl text-gray-700"> Miami, Florida</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-black">Email Us</h3>
-              <p className="text-gray-700">contact@yourdomain.com</p>
+              <h3 className="text-6xl font-anton text-black">Email Us</h3>
+              <p className="mt-2 text-3xl text-gray-700">info@goforwardsports.net</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-black">Call Us</h3>
-              <p className="text-gray-700">+54 9 11 1234 5678</p>
+              <h3 className="text-6xl font-anton text-black">Call Us</h3>
+              <p className="mt-2 text-3xl text-gray-700">+54 0 12 3456 7890</p>
             </div>
           </div>
 

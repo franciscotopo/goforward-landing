@@ -6,7 +6,7 @@ import Contact from './Contact/Contact'
 const Home = () => {
   
   return (
-    <div className="overflow-hidden h-[2250]">
+    <div className="overflow-hidden ">
       <Hero/>
       <HomeProducts />
       <Contact />
