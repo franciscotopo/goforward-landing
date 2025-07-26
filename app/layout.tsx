@@ -18,9 +18,10 @@ const anton = Anton({
 export const metadata: Metadata = {
   title: "GoForward | Official Site",
   description: "Gear Up. Lock In. Go Forward",
-  icons: {
-    icon: "/favicon.svg"
-  }
+  icons: [
+    { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
+    { rel: "icon", url: "/favicon.ico", type: "image/x-icon" }, // fallback
+  ],
 };
 
 export default function RootLayout({
@@ -30,6 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
       <body
         className={`${poppins.variable, anton.variable} antialiased`}
       >
