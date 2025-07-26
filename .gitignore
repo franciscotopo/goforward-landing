@@ -20,6 +20,8 @@
 # production
 /build
 
+/public/files/catalogue.pdf
+
 # misc
 .DS_Store
 *.pem
