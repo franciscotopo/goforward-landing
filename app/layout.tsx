@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: "Gear Up. Lock In. Go Forward",
   icons: [
     { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
-    { rel: "icon", url: "/favicon.ico", type: "image/x-icon" }, // fallback
+    { rel: "icon", url: "/favicon.ico", type: "image/x-icon" },
   ],
 };
 
