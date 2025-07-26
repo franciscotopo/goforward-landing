@@ -51,7 +51,7 @@ const HomeProducts = () => {
             </h3>
 
             <a
-              href="/files/catalogue.pdf"
+              href="public/files/catalogue.pdf"
               download
               className="mt-5 btn-primary cursor-pointer"
             >

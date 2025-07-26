@@ -17,7 +17,10 @@ const anton = Anton({
 
 export const metadata: Metadata = {
   title: "GoForward | Official Site",
-  description: "GoForward WebPage using Next.js 15",
+  description: "Gear Up. Lock In. Go Forward",
+  icons: {
+    icon: "/favicon.svg"
+  }
 };
 
 export default function RootLayout({
