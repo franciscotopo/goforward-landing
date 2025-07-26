@@ -47,7 +47,7 @@ const HomeProducts = () => {
             </h1>
 
             <h3 className="mt-5 font-anton text-4xl text-gray-100">
-              Meanwhile, check out our catalogue
+              Meanwhile, check out our catalog and send us an inquiry using the online form below
             </h3>
 
             <a
@@ -55,7 +55,7 @@ const HomeProducts = () => {
               download
               className="mt-5 btn-primary cursor-pointer"
             >
-              Download Catalogue
+              Download Catalog
             </a>
           </div>
         </div>

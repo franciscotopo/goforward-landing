@@ -1,11 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import AnimatedTitle from "../../../hooks/AnimatedTitle";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("xblkodaa");
+  const [state, handleSubmit] = useForm("xgvzknea");
+  const formRef = useRef<HTMLFormElement>(null);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  useEffect(() => {
+    if (state.succeeded) {
+
+      formRef.current?.reset();
+      setShowSuccess(true);
+      const timeout = setTimeout(() => {
+        setShowSuccess(false);
+      }, 4000);
+      return () => clearTimeout(timeout);
+    }
+  }, [state.succeeded]);
+
 
   return (
     <section id="contact" className="scroll-mt-30">
@@ -16,8 +31,8 @@ const Contact = () => {
           {/* Left: Contact Info */}
           <div className="space-y-8 mt-5">
             <div>
-              <h3 className="text-6xl font-anton text-orange">Based In</h3>
-              <p className="mt-2 text-3xl text-gray-700"> Miami, Florida</p>
+              <h3 className="text-6xl font-anton text-orange">Headquarters</h3>
+              <p className="mt-2 text-3xl text-gray-700"> Miami, Florida - USA</p>
             </div>
             <div>
               <h3 className="text-6xl font-anton text-black">Email Us</h3>
@@ -25,13 +40,13 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="text-6xl font-anton text-black">Call Us</h3>
-              <p className="mt-2 text-3xl text-gray-700">+54 0 12 3456 7890</p>
+              <p className="mt-2 text-3xl text-gray-700">+1 954 400 8525</p>
             </div>
           </div>
 
           {/* Right: Form */}
           <form
-            action="https://formspree.io/f/xblkodaa"
+            action="https://formspree.io/f/xgvzknea"
             method="POST"
             className="bg-white p-6 rounded-xl shadow-md space-y-4"
             onSubmit={handleSubmit}
@@ -96,6 +111,7 @@ const Contact = () => {
             >
               Send
             </button>
+            
             {state.succeeded && (
               <div className="mb-4 text-orange-400 font-bold">
                 <p>Message received! We`ll keep in touch.</p>

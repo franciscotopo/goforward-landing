@@ -24,7 +24,7 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
       >
         {navLinks.map((link) => {
           return (
-            <Link key={link.id} href={link.url}>
+            <Link key={link.id} href={link.url} onClick={closeNav}>
               <p
                 className={`relative text-white w-fit text-[20px] sm:text-[30px] ml-12
     after:block after:content-[''] after:absolute after:left-0 after:-bottom-1
