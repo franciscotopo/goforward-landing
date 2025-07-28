@@ -7,34 +7,33 @@ import AnimatedTitle from "../../../hooks/AnimatedTitle";
 const HomeProducts = () => {
   return (
     <section id="products" className="scroll-mt-30">
-      <div className="relative w-full min-h-screen bg-orange-400 px-4 py-10 flex flex-col items-center">
-        
-        {/* Título centrado que ocupa las 3 columnas */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 mb-8">
-          <div className="md:col-span-3">
-            <AnimatedTitle text="Our Products" textColor="text-white" />
-          </div>
+
+      <div className="w-full bg-orange-400 px-4 py-4 flex flex-col gap-y-2">
+
+        <div>
+          <div className="bg-red-500 rounded-lg min-h-[50px]"></div>
         </div>
 
-        {/* Grid de imágenes */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
-          <img
-            src="/images/rim1.jpeg"
-            alt="Producto 1"
-            className="w-full h-64 object-cover rounded-lg shadow-md"
-          />
-          <img
-            src="/images/rim2.jpeg"
-            alt="Producto 2"
-            className="w-full h-64 object-cover rounded-lg shadow-md"
-          />
-          <img
-            src="/images/court.jpeg"
-            alt="Producto 3"
-            className="w-full h-64 object-cover rounded-lg shadow-md"
-          />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-2 gap-y-3">
+          
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          <div className="bg-blue-500 rounded-lg min-h-[50px]"></div>
+          
         </div>
+
       </div>
+      
     </section>
   );
 };
