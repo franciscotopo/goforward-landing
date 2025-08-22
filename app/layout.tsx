@@ -16,7 +16,7 @@ const anton = Anton({
 })
 
 export const metadata: Metadata = {
-  title: "GoForward | Official Site",
+  title: "GoForward Sports | Official Site",
   description: "Gear Up. Lock In. Go Forward",
   icons: [
     { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
