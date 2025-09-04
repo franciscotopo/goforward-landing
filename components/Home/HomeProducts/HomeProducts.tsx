@@ -52,10 +52,11 @@ const HomeProducts = () => {
 
             <a
               href="/Catalogo.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-5 btn-primary cursor-pointer"
             >
-              Download Catalog
+              Download Catalogue
             </a>
           </div>
         </div>
