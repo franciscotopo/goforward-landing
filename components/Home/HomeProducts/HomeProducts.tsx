@@ -51,7 +51,7 @@ const HomeProducts = () => {
             </h3>
 
             <a
-              href="/Catalogo.pdf"
+              href="https://drive.google.com/uc?export=download&id=1zM2FcTA7q23_-DP4HyB6W7ebVIXTZyyK"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 btn-primary cursor-pointer"
